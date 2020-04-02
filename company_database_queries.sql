@@ -155,6 +155,18 @@ WHERE client.branch_id = (
     LIMIT 1
 );
 
+-- On Delete (3:21:54)
+
+-- ON DELETE SET NULL = if deleted,
+-- ON DELETE CASCADE = delete all rows associated with other delete
+
+DELETE FROM employee
+WHERE emp_id = 102;
+
+-- use ON DELETE SET NULL with foreign keys
+-- better to use ON DELETE CASCADE with primary keys
+
+
 
 
 
