@@ -218,6 +218,35 @@ VALUES(111, 'Pam', 'Beesly', '1988-02-19', 'F', 69000, 106, 3);
 DROP TRIGGER my_trigger;
 
 
+-- ER Diagrams Intro
+-- ER - Entity Relationship
+
+-- Entity - an object we want to model and store information about (i.e. student)
+-- Attributes - specific pieces of information about an entity (name, GPA, grade #)
+-- Primary Key - Attribute that uniquiley identifies an entry in the database table
+--      primary keys typically underlined
+-- composite attributes - attributes that can be broken up into sub-attributes
+--      name to first and last name
+-- multi-values attribute -- attribute that can have more than one value
+--      clubs - 
+-- derived attribute - attribute that can be derived from the other attributes
+--      honors is GPA > 3.5
+-- Multiple entities - you can define more than one entity
+--      classes
+-- relationships - defines a relationship between two entities
+-- student takes class, class is taken by student
+-- total participation - all members must participate in the relationship
+--      single line indicates partial participation
+--      double line indicates total participation
+-- Relationship Attribute - an attribute about the relationship
+--      class grades
+-- Relationship Cardinality - the number of instances of an entity from a relation
+-- that can be associated with the relation
+--      1:1 a studnet can take 1 class
+--      1:N a student can take any number N classes
+--      N:M  a class can have M students
+-- Weak Entity - An entity that cannot be uniquely identified by its attributes alone
+
 
 
 
