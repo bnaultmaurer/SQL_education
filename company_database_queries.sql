@@ -166,8 +166,56 @@ WHERE emp_id = 102;
 -- use ON DELETE SET NULL with foreign keys
 -- better to use ON DELETE CASCADE with primary keys
 
+-- Triggers (3:30:06)
 
+-- a trigger is a block of code that defines a certain action
+-- when another sction is taken
+-- add trigger table to database
+CREATE TABLE trigger_test(
+    message VARCHAR(100)
+);
 
+-- trigger example
+DELIMITER $$ -- need to change delimiter as ; used below
+CREATE
+    TRIGGER my_trigger1 BEFORE INSERT
+    ON employee
+    FOR EACH ROW BEGIN
+        INSERT INTO trigger_test VALUES(NEW.first_name);
+    END $$
+DELIMITER ;
+
+-- insert new employee to test
+INSERT INTO employee
+VALUES(109, 'Oscar', 'Martinez', '1968-02-19', 'M', 69000, 106, 3);
+INSERT INTO employee
+VALUES(110, 'Kevin', 'Malone', '1978-02-19', 'M', 69000, 106, 3);
+
+-- IF, ELSE IF conditions example
+DELIMITER $$ -- need to change delimiter as ; used below
+CREATE
+    TRIGGER my_trigger2 BEFORE INSERT
+    ON employee
+    FOR EACH ROW BEGIN
+        IF NEW.sex = 'M' THEN
+            INSERT INTO trigger_test VALUES('added male employee');
+        ELSEIF NEW.sex = 'F' THEN
+            INSERT INTO trigger_test VALUES('added female employee');
+        ELSE
+            INSERT INTO trigger_test VALUES('added other employee');
+        END IF;
+    END $$
+DELIMITER ;
+
+-- insert new employee
+INSERT INTO employee
+VALUES(111, 'Pam', 'Beesly', '1988-02-19', 'F', 69000, 106, 3);
+
+-- can also make triggers for INSERT, UPDATE, DELETE
+-- can also make triggers AFTER and INSERT, UPDATE, DELETE
+
+-- drop triggers
+DROP TRIGGER my_trigger;
 
 
 

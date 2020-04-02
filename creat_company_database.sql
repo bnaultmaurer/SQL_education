@@ -124,3 +124,8 @@ INSERT INTO works_with VALUES(105, 406, 130000);
 
 -------------- EDITS
 INSERT INTO branch VALUES(4, 'Buffalo', NULL, NULL)
+
+-- trigger examples
+INSERT INTO employee VALUES(109, 'Oscar', 'Martinez', '1968-02-19', 'M', 69000, 106, 3);
+INSERT INTO employee VALUES(110, 'Kevin', 'Malone', '1978-02-19', 'M', 69000, 106, 3);
+INSERT INTO employee VALUES(111, 'Pam', 'Beesly', '1988-02-19', 'F', 69000, 106, 3);
