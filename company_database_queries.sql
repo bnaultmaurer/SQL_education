@@ -228,7 +228,7 @@ DROP TRIGGER my_trigger;
 -- composite attributes - attributes that can be broken up into sub-attributes
 --      name to first and last name
 -- multi-values attribute -- attribute that can have more than one value
---      clubs - 
+--      clubs -
 -- derived attribute - attribute that can be derived from the other attributes
 --      honors is GPA > 3.5
 -- Multiple entities - you can define more than one entity
@@ -247,6 +247,19 @@ DROP TRIGGER my_trigger;
 --      N:M  a class can have M students
 -- Weak Entity - An entity that cannot be uniquely identified by its attributes alone
 
+-- Designing an ER Diagram (3:55:54)
+
+-- general overview of creating an ER Diagram of the company database
+
+-- Converting ER Diagrams to Schemas (4:08:35)
+
+-- 1) map regular entity types
+-- 2) map weak entity types
+-- 3) map binary 1:1 relationship types
+-- 4) map binary 1:N relationship types
+-- 5) MAp binary M:N relationship types
+
+-- don't always need ER Diagrams, but useful to go from text to schema
 
 
 
