@@ -1,3 +1,5 @@
+-- this code not written by me.  Included to provide opportunity to build table
+-- other queries are run off of.
 
 CREATE TABLE employee (
   emp_id INT PRIMARY KEY,
